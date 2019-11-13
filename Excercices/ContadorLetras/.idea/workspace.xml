@@ -31,7 +31,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.Resuelto">
+  <component name="RunManager" selected="Python.Ejercicio4">
     <configuration name="Ejercicio4" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="ContadorLetras" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -76,8 +76,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.Resuelto" />
         <item itemvalue="Python.Ejercicio4" />
+        <item itemvalue="Python.Resuelto" />
       </list>
     </recent_temporary>
   </component>
