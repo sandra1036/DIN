@@ -2,27 +2,55 @@ from tkinter import *
 from tkinter import ttk
 
 window=Tk()
+window.rowconfigure(0,weight=1)
+window.columnconfigure(0,weight=5)
 
-frame=ttk.Frame(window)
-frame.grid(column=0,row=0)
 
 
-buttonClear=ttk.Button(frame,text="Clear")
-buttonClear.grid(column=0,row=0, sticky = W)
-
-buttonSet=ttk.Button(frame,text="Set")
-buttonSet.grid(column=0,row=5, sticky = W)
-
-combo=ttk.Combobox(frame)
-combo.grid(column=1,columnspan=4,row=5)
-combo["values"]=("Red","Green","Yellow","Purple")
-combo.set(combo["values"][0])
+#variable combo
+colorL=StringVar()
 
 #ListLabel
 listlabel=list()
 #List CheckButton
 listchbh=list()
 listchbv=list()
+
+
+def colors(listV:list,listH:list,listlabels:list,colorL:StringVar):
+
+    for r in range(len(listlabels)):
+        for c in range(len(listlabels[r])):
+            if listV[r].get() and listH[c].get():
+                print("dentro")
+                listlabels[r][c].config(background=colorL.get())
+
+
+def clear(listlabels:list):
+    print("limpiar")
+    for r in range(len(listlabels)):
+        for c in range(len(listlabels[r])):
+            listlabels[r][c]["background"]= ""
+
+
+
+frame=ttk.Frame(window)
+
+frame.grid(column=0,row=0,sticky=NSEW)
+
+
+buttonClear=ttk.Button(frame,text="Clear",command=lambda : clear(listlabel))
+buttonClear.grid(column=0,row=0, sticky = W)
+
+buttonSet=ttk.Button(frame,text="Set",command=lambda: colors(listchbv,listchbh,listlabel,colorL))
+buttonSet.grid(column=0,row=5, sticky = W)
+
+combo=ttk.Combobox(frame,textvar=colorL)
+combo.grid(column=1,columnspan=4,row=5)
+combo["values"]=("Red","Green","Yellow","Purple","Blue","Orange")
+combo.set(combo["values"][0])
+combo.bind("<<ComboSelected>>"),lambda e: colors(listchbh,listchbh,listlabel,colorL)
+
 
 
 #CheckButton
@@ -41,8 +69,12 @@ for r in range(4):
     listlabel.append([])
     for c in range(4):
         listlabel[r].append(ttk.Label(frame,relief="ridge",padding=(30,30,40,30)))
-        listlabel[r][c].grid(row=r+1,column=c+1)
+        listlabel[r][c].grid(row=r+1,column=c+1,sticky=NSEW)
+        frame.rowconfigure(r+1, weight=1)
+        frame.columnconfigure(c+1, weight=1)
 
+window.update()
+window.minsize(window.winfo_width(),window.winfo_height())
 window=mainloop()
 
 
