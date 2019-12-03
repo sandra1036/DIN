@@ -25,12 +25,34 @@ def colors(listV:list,listH:list,listlabels:list,colorL:StringVar):
                 print("dentro")
                 listlabels[r][c].config(background=colorL.get())
 
-
 def clear(listlabels:list):
-    print("limpiar")
     for r in range(len(listlabels)):
         for c in range(len(listlabels[r])):
             listlabels[r][c]["background"]= ""
+
+
+
+#otra manera
+
+    #Coordenadas
+def get_coordinates(h:list,v:list)-> list:
+    coords=[]
+    for r in range(4):
+        if v[r].get()=="1":
+            for c in range(4):
+                if h[c].get()=="1":
+                    coords.append((r,c))
+    return coords
+
+    #Colores
+
+def set_labels_color(h:list,v:list,s,lg:list):
+    coord=get_coordinates(h,v)
+    color=s.get()
+    for t in coord:
+        (r,c)=t
+        lg[r][c]["background"]=color
+
 
 
 
@@ -46,7 +68,7 @@ buttonSet=ttk.Button(frame,text="Set",command=lambda: colors(listchbv,listchbh,l
 buttonSet.grid(column=0,row=5, sticky = W)
 
 combo=ttk.Combobox(frame,textvar=colorL)
-combo.grid(column=1,columnspan=4,row=5)
+combo.grid(column=1,columnspan=4,row=5,sticky="we")
 combo["values"]=("Red","Green","Yellow","Purple","Blue","Orange")
 combo.set(combo["values"][0])
 combo.bind("<<ComboSelected>>"),lambda e: colors(listchbh,listchbh,listlabel,colorL)
