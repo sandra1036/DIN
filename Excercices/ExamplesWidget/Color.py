@@ -5,7 +5,7 @@ from tkinter import messagebox
 def colorla(label:ttk.Label):
     color=colorchooser.askcolor(initialcolor='#ff0000')
     print(color)
-    if messagebox.askyesno(message='Estas seguro'):
+    if messagebox.askyesno(message='¿Estas seguro?'):
         label["background"] = color[1]
 
 
