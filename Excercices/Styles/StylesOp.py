@@ -23,14 +23,6 @@ sel=ttk.Combobox(frame,textvariable=ChVar)
 sel.pack()
 sel["values"]=s.theme_names()
 sel.bind("<<ComboboxSelected>>",lambda e: s.theme_use(ChVar.get()))
-
-
-
-
-
-
-
-
 window=mainloop()
 
 
