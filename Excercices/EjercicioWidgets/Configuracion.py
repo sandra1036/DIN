@@ -2,14 +2,43 @@ from tkinter import ttk
 from tkinter import *
 from tkinter import colorchooser
 from tkinter import messagebox
+from tkinter.font import Font
 def color(label:ttk.Label):
     col=colorchooser.askcolor(initialcolor='#ff0000')
     if messagebox.askyesno(message='¿Estas seguro?'):
         label["background"] = col[1]
 
-def labels(label:ttk.Label):
+def labels(label):
+    styles.theme_use(varcom.get())
+
     if Nvar.get():
-        label.configure(font=("Times New Roman", 12, "bold"))
+        label.configure(font=('helvetica 11 bold'))
+    else:
+        label.configure(font=('helvetica 11'))
+
+    if Nvar.get() and Ivar.get():
+        label.configure(font=('helvetica 11 bold italic'))
+
+    if Nvar.get() and Svar.get():
+        label.configure(font=('helvetica 11 bold underline'))
+
+    if Svar.get():
+        label.configure(font=('helvetica 11 underline'))
+
+    if Svar.get() and Ivar.get():
+        label.configure(font=('helvetica 11 underline italic'))
+
+    if Ivar.get():
+        label.configure(font=('helvetica 11 italic'))
+
+    if Nvar.get() and Ivar.get() and Svar.get():
+        label.configure(font=(('helvetica 11 underline bold italic')))
+
+
+
+
+def snbutton():
+    styles.theme_use(varcom.get())
 
 
 window=Tk()
@@ -26,17 +55,19 @@ n.pack()
 fr1=ttk.Frame(n)
 n.add(fr1,text="Ver")
 #Checkbox
-Nvar=StringVar()
-Svar=StringVar()
-Ivar=StringVar()
-labelV=ttk.Label(fr1,text="Cambiame")
+Nvar=IntVar()
+Svar=IntVar()
+Ivar=IntVar()
+labelV=ttk.Label(fr1,text="Cambiame", style="")
 labelV.pack()
 checkboxN=ttk.Checkbutton(fr1,text="Negrita",variable=Nvar)
 checkboxN.pack()
 checkboxS=ttk.Checkbutton(fr1,text="Subrayar",variable=Svar)
 checkboxS.pack()
-checkboxI=ttk.Checkbutton(fr1,text="Cursiva",variable=IntVar)
+checkboxI=ttk.Checkbutton(fr1,text="Cursiva",variable=Ivar)
 checkboxI.pack()
+button=ttk.Button(text="Dale", command=lambda : labels(labelV))
+button.pack()
 #Frame2
 spinboxvar=IntVar()
 fr2=ttk.Frame(n)
@@ -61,12 +92,18 @@ buttonColor.pack()
 frameS=ttk.Frame(window)
 frameS.pack()
 styles=ttk.Style()
+
+#ComboBox
 varcom=StringVar()
 combobox=ttk.Combobox(frameS,textvariable=varcom)
 combobox.pack()
 combobox["values"]=styles.theme_names()
-combobox.bind("<<ComboboxSelected>>",lambda e: styles.theme_use(varcom.get()))
+combobox.bind("<<ComboboxSelected>>",lambda e: snbutton())
 combobox.set(combobox["values"][0])
+
+#Styles
+styles.theme_use('clam')
+
 
 
 
