@@ -37,8 +37,12 @@ def labels(label):
     if Nvar.get() and Ivar.get() and Svar.get():
         label.configure(font=(('helvetica 11 underline bold italic')))
 
-def file():
+def labelsT(label):
 
+        label.configure(font=(('helvetica 20')))
+
+
+def file():
     filename = filedialog.askopenfilename()
     filename = filedialog.asksaveasfilename()
     dirname = filedialog.askdirectory()
@@ -75,14 +79,15 @@ def preferences(window):
     button = ttk.Button(text="Dale", command=lambda: labels(labelV))
     button.pack()
     # Frame2
-    spinboxvar = IntVar()
+    spinboxvar = StringVar()
     fr2 = ttk.Frame(n)
     n.add(fr2, text="Editor")
     labelE = ttk.Label(fr2, text="Cambio de tamaño")
     labelE.pack()
-    spinbox = Spinbox(fr2, from_=20.0, to=100.0, textvar=spinboxvar)
+    spinbox = Spinbox(fr2, from_=20.0, to=100.0, textvar=spinboxvar,command=lambda :labelsT(labelE,spinboxvar))
     spinbox.pack()
 
+    spinbox.bind('<Button-1>>',lambda e: labelsT(labelE))
     # Frame3
     col = StringVar()
     fr3 = ttk.Frame(n)
