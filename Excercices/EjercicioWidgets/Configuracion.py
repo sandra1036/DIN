@@ -3,6 +3,7 @@ from tkinter import *
 from tkinter import colorchooser
 from tkinter import messagebox
 from tkinter.font import Font
+from  tkinter import filedialog
 
 window=Tk()
 def color(label:ttk.Label):
@@ -36,8 +37,11 @@ def labels(label):
     if Nvar.get() and Ivar.get() and Svar.get():
         label.configure(font=(('helvetica 11 underline bold italic')))
 
+def file():
 
-
+    filename = filedialog.askopenfilename()
+    filename = filedialog.asksaveasfilename()
+    dirname = filedialog.askdirectory()
 
 def snbutton():
     styles.theme_use(varcom.get())
@@ -126,10 +130,13 @@ text.pack()
 menubar = Menu(window)
 menu_nuevo = Menu(menubar)
 menu_conf = Menu(menubar)
+menu_abrir=Menu(menubar)
 window['menu'] = menubar #Sin esto no sale
 
-menubar.add_command(label='Nuevo')
-menubar.add_command(label='Configuración', command=lambda :preferences(window))
+menubar.add_command(label='New')
+menubar.add_command(label='Settings', command=lambda :preferences(window))
+menubar.add_command(label="Open",command=lambda :file())
+
 
 
 window.mainloop()
