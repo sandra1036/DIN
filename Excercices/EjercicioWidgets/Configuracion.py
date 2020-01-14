@@ -86,7 +86,6 @@ def preferences(window):
     labelE.pack()
     spinbox = Spinbox(fr2, from_=20.0, to=100.0, textvar=spinboxvar,command=lambda :labelsT(labelE,spinboxvar))
     spinbox.pack()
-
     spinbox.bind('<Button-1>>',lambda e: labelsT(labelE))
     # Frame3
     col = StringVar()

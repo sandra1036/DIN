@@ -5,10 +5,8 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Configuracion.py" beforeDir="false" afterPath="$PROJECT_DIR$/Configuracion.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TopLabel.py" beforeDir="false" afterPath="$PROJECT_DIR$/TopLabel.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Widgets/.idea/Widgets.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../Widgets/.idea/Widgets.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Widgets/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Widgets/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Widgets/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Widgets/.idea/workspace.xml" afterDir="false" />
     </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -33,11 +31,23 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Widgets" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="restartRequiresConfirmation" value="false" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
-  <component name="RunManager" selected="Python.Configuracion">
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Python.TopLabel">
     <configuration name="Configuracion" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="EjercicioWidgets" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -82,22 +92,10 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.Configuracion" />
         <item itemvalue="Python.TopLabel" />
+        <item itemvalue="Python.Configuracion" />
       </list>
     </recent_temporary>
-  </component>
-  <component name="ServiceViewManager">
-    <option name="viewStates">
-      <list>
-        <serviceView>
-          <treeState>
-            <expand />
-            <select />
-          </treeState>
-        </serviceView>
-      </list>
-    </option>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -111,6 +109,17 @@
       <updated>1578381924887</updated>
     </task>
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="WindowStateProjectService">
     <state x="780" y="297" key="FileChooserDialogImpl" timestamp="1578917312502">
