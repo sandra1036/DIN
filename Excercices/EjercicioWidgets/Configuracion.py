@@ -37,9 +37,10 @@ def labels(label):
     if Nvar.get() and Ivar.get() and Svar.get():
         label.configure(font=(('helvetica 11 underline bold italic')))
 
-def labelsT(label):
-
-        label.configure(font=(('helvetica 20')))
+def labelsT(label,spinbox):
+        print("hola")
+        label.configure(font=(('helvetica {}')).__format__(spinbox))
+        spinbox+=1
 
 
 def file():
@@ -68,7 +69,7 @@ def preferences(window):
     n.add(fr1, text="Ver")
     # Checkbox
 
-    labelV = ttk.Label(fr1, text="Cambiame", style="")
+    labelV = ttk.Label(fr1, text="Cambiame")
     labelV.pack()
     checkboxN = ttk.Checkbutton(fr1, text="Negrita", variable=Nvar)
     checkboxN.pack()
@@ -76,7 +77,7 @@ def preferences(window):
     checkboxS.pack()
     checkboxI = ttk.Checkbutton(fr1, text="Cursiva", variable=Ivar)
     checkboxI.pack()
-    button = ttk.Button(text="Dale", command=lambda: labels(labelV))
+    button = ttk.Button(fr1,text="Dale", command=lambda: labels(labelV))
     button.pack()
     # Frame2
     spinboxvar = StringVar()
@@ -84,9 +85,10 @@ def preferences(window):
     n.add(fr2, text="Editor")
     labelE = ttk.Label(fr2, text="Cambio de tamaño")
     labelE.pack()
-    spinbox = Spinbox(fr2, from_=20.0, to=100.0, textvar=spinboxvar,command=lambda :labelsT(labelE,spinboxvar))
+    spinbox = Spinbox(fr2, from_=20.0, to=100.0, textvariable=spinboxvar)
     spinbox.pack()
-    spinbox.bind('<Button-1>>',lambda e: labelsT(labelE))
+    spinbox.bind('<<Button-1>>',lambda e: labelsT(labelE,spinboxvar))
+
     # Frame3
     col = StringVar()
     fr3 = ttk.Frame(n)
