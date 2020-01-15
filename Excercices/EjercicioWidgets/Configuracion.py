@@ -6,10 +6,6 @@ from tkinter.font import Font
 from  tkinter import filedialog
 
 window=Tk()
-def color(label:ttk.Label):
-    col=colorchooser.askcolor(initialcolor='#ff0000')
-    if messagebox.askyesno(message='¿Estas seguro?'):
-        label["background"] = col[1]
 
 def labels(label):
     styles.theme_use(varcom.get())
@@ -37,19 +33,35 @@ def labels(label):
     if Nvar.get() and Ivar.get() and Svar.get():
         label.configure(font=(('helvetica 11 underline bold italic')))
 
-def labelsT(label,spinbox):
-        print("hola")
-        label.configure(font=(('helvetica {}')).__format__(spinbox))
-        spinbox+=1
+def labelsT(label,spinbox:IntVar):
+#font=font.Font(Family='helvetica',size=20,weight='bold')
+#style.configure('TLabel',font=font)
+#ttk.Label(frame,text='Etiqueta').pack()
+        label.configure(font=(('helvetica {}'.format(spinbox.get()))))
+        spinbox.set(spinbox.get()+1)
 
-
+#Color
+def color(label:ttk.Label):
+    col=colorchooser.askcolor(initialcolor='#ff0000')
+    if messagebox.askyesno(message='¿Estas seguro?'):
+        label["background"] = col[1]
+#Open
 def file():
     filename = filedialog.askopenfilename()
     filename = filedialog.asksaveasfilename()
     dirname = filedialog.askdirectory()
 
 def snbutton():
+
     styles.theme_use(varcom.get())
+
+def new (notebook):
+
+    text=Text()
+    text.pack()
+    notebook.add(text)
+
+
 
 def preferences(window):
     windowC=Toplevel(window)
@@ -80,14 +92,14 @@ def preferences(window):
     button = ttk.Button(fr1,text="Dale", command=lambda: labels(labelV))
     button.pack()
     # Frame2
-    spinboxvar = StringVar()
+    spinboxvar = IntVar()
     fr2 = ttk.Frame(n)
     n.add(fr2, text="Editor")
     labelE = ttk.Label(fr2, text="Cambio de tamaño")
     labelE.pack()
-    spinbox = Spinbox(fr2, from_=20.0, to=100.0, textvariable=spinboxvar)
+    spinbox = Spinbox(fr2, from_=20.0, to=100.0, textvariable=spinboxvar,command=lambda :labelsT(labelE,spinboxvar))
     spinbox.pack()
-    spinbox.bind('<<Button-1>>',lambda e: labelsT(labelE,spinboxvar))
+
 
     # Frame3
     col = StringVar()
@@ -126,11 +138,6 @@ Nvar = IntVar()
 Svar = IntVar()
 Ivar = IntVar()
 varcom = StringVar()
-#Text
-text=Text(window)
-text.pack()
-
-
 #Menu
 
 menubar = Menu(window)
@@ -139,10 +146,16 @@ menu_conf = Menu(menubar)
 menu_abrir=Menu(menubar)
 window['menu'] = menubar #Sin esto no sale
 
-menubar.add_command(label='New')
+menubar.add_command(label='New', command=lambda: new(notebook))
 menubar.add_command(label='Settings', command=lambda :preferences(window))
 menubar.add_command(label="Open",command=lambda :file())
 
+#notebook
 
+notebook = ttk.Notebook(window)
+notebook.pack()
 
+window.update()
+window.maxsize(500,500)
+window.minsize(300,200)
 window.mainloop()
