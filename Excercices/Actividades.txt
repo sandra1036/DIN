@@ -1,0 +1,6 @@
+Ejercicos python
+
+
+-> con un triangulo que se mueva para esquivar los asteroides que se pueden hacer con circulos
+-> velocimetro
+
