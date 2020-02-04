@@ -43,7 +43,7 @@ canvas.create_polygon(45,214,199,219,195,229,44,215,fill="red",outline="black",o
 pointl=[[-180, 0],[-150, 0]]
 homogenize(pointl)
 to = gettranslation(200,200)
-for rot in range(-10,200,20):
+for rot in range(-10,200,10):
     rotation = getrotation(rot)
     trasladar = np.dot(rotation,to)
     linelist=list()    
