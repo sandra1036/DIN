@@ -34,23 +34,24 @@ canvas=Canvas(window)
 canvas.pack()
 point=[10, 60, 350, 400]
 canvas.create_arc(point,start=0,extent=180)
-pointl=[[35,217],[60,217]]
-canvas.create_line(pointl)
+
 canvas.create_oval(173-2,214-2,194+2,232+2,fill="black")
 canvas.create_oval(173,214,194,232,fill="red")
 canvas.create_polygon(45,214,199,219,195,229,44,215,fill="red",outline="black",outlineoffset=1)
 
-homogenize(pointl)
-linelist=list()
-to=gettranslation(-48,50)
-rotation=getrotation(20)
-trasladar=np.dot(to,rotation)
-trasladar2=np.dot(trasladar,to)
-for i in range(len(pointl)):
-    linelist.append(np.dot(point[i],trasladar).tolist())
 
-dehomogenize(linelist)
-canvas.create_line(point)
+pointl=[[-180, 0],[-150, 0]]
+homogenize(pointl)
+to = gettranslation(200,200)
+for rot in range(-10,200,20):
+    rotation = getrotation(rot)
+    trasladar = np.dot(rotation,to)
+    linelist=list()    
+    for i in range(len(pointl)):
+        linelist.append(np.dot(pointl[i],trasladar).tolist())
+    dehomogenize(linelist)
+    canvas.create_line(linelist)
+
 
 
 canvas.bind("<Button-1>", lambda e:print(e.x,e.y))
