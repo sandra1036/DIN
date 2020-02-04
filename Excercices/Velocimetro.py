@@ -31,11 +31,14 @@ f.pack()
 spd = Canvas(f, width=400, height=400)
 spd.grid(row=0, column=0)
 
-spd.create_oval(20,20,380,380)
-spd.create_oval(15,15,385,385)
-spd.create_oval(180,180,220,220)
-spd.create_text([[200, 230]], text='km/h')
+spd.create_oval(15,15,385,385,fill='grey')
+spd.create_oval(20,20,380,380,fill='white')
 
+spd.create_oval(175,175,225,225,fill='grey')
+spd.create_oval(180,180,220,220,fill='black')
+
+spd.create_text([[200, 235]], text='km/h')
+spd.create_oval(90,275,95,280, fill='black')
 
 
 short = [[-175, 0],[-150, 0]]
@@ -44,9 +47,7 @@ toorig = gettranslation(200, 200)
 for rot in range(-20,220,20):
     rotation = getrotation(rot)
     transform = np.dot(rotation, toorig)
-    temp = list()
-    for i in range(len(short)):
-        temp.append(np.dot(short[i],transform).tolist())
+    temp = np.dot(short,transform).tolist()
     dehomogenize(temp)
     spd.create_line(temp)
 
@@ -56,9 +57,9 @@ toorig = gettranslation(200, 200)
 for rot in range(-30,220,20):
     rotation = getrotation(rot)
     transform = np.dot(rotation, toorig)
-    temp = list()
-    for i in range(len(short)):
-        temp.append(np.dot(large[i],transform).tolist())
+    temp = np.dot(large,transform).tolist()
+    # for i in range(len(short)):
+    #     temp.append(np.dot(large[i],transform).tolist())
     dehomogenize(temp)
     spd.create_line(temp)
 
@@ -69,8 +70,8 @@ vel = 0
 for rot in range(-30,220,20):
     rotation = getrotation(rot)
     transform = np.dot(rotation, toorig)
-    temp = list()
-    temp.append(np.dot(pos[0],transform).tolist())
+    temp = np.dot(pos,transform).tolist()
+    # temp.append(np.dot(pos[0],transform).tolist())
     dehomogenize(temp)
     spd.create_text(temp, text=str(vel))
     vel = vel + 20
@@ -79,9 +80,11 @@ for rot in range(-30,220,20):
 needle = [[0,0], [-7, -7], [0, -150], [7, -7]]
 homogenize(needle)
 toorig = gettranslation(200, 200)
-needle2 = list()
-for i in range(len(needle)):
-    needle2.append(np.dot(needle[i],toorig).tolist())
+rotation = getrotation(-123)
+transform = np.dot(rotation, toorig)
+needle2 = np.dot(needle,transform).tolist()
+# for i in range(len(needle)):
+#     needle2.append(np.dot(needle[i],toorig).tolist())
 dehomogenize(needle2)
 spd.create_polygon(needle2, outline='#f11', fill='#1f1', width=2)
 
