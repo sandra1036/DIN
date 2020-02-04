@@ -32,27 +32,49 @@ def getrotation(deg:float)->list:
 window=Tk()
 canvas=Canvas(window)
 canvas.pack()
-point=[10, 60, 350, 400]
-canvas.create_arc(point,start=0,extent=180)
+
 
 canvas.create_oval(173-2,214-2,194+2,232+2,fill="black")
 canvas.create_oval(173,214,194,232,fill="red")
-canvas.create_polygon(45,214,199,219,195,229,44,215,fill="red",outline="black",outlineoffset=1)
+canvas.create_polygon(12,233,198,218,199,230,12,233,fill="red",outline="black",outlineoffset=1)
 
-
-pointl=[[-180, 0],[-150, 0]]
+#la segunda parte agranda las lineas en x(cuanto menos negativo mas grandes son) y las rota en las y
+pointl=[[-190, 0],[-170, 0]]
 homogenize(pointl)
-to = gettranslation(200,200)
-for rot in range(-10,200,10):
+to = gettranslation(190,200)
+
+#El - es el angulo en negativo fuera del canvas el 2 se mueve hacia la izquierda, y el ultimo parametro es la distancia entre las lineas
+#Crea lineas del angulo -10 al 180 si pones mas que esto se crearan mas lineas
+for rot in range(-10,194,14):
     rotation = getrotation(rot)
     trasladar = np.dot(rotation,to)
-    linelist=list()    
+    #Poner la lista dentro si lo pones fuera no funciona
+    linelist=list()
     for i in range(len(pointl)):
         linelist.append(np.dot(pointl[i],trasladar).tolist())
     dehomogenize(linelist)
     canvas.create_line(linelist)
 
+#Crea los strings
+
+#Strings
+pos = [[-150, 0]]
+homogenize(pos)
+to = gettranslation(190,200)
+vel = 0
+for rot in range(-10,194,14):
+    rotation = getrotation(rot)
+    transform = np.dot(rotation, to)
+    temp = list()
+    temp.append(np.dot(pos[0],transform).tolist())
+    dehomogenize(temp)
+    canvas.create_text(temp, text=str(vel))
+    vel = vel + 20
+
+
 
 
 canvas.bind("<Button-1>", lambda e:print(e.x,e.y))
+window.update()
+window.minsize(500,350)
 window.mainloop()
