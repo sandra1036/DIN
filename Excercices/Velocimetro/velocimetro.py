@@ -71,6 +71,18 @@ for rot in range(-10,194,14):
     canvas.create_text(temp, text=str(vel))
     vel = vel + 20
 
+short = [[-180, 0],[-170, 0]]
+homogenize(short)
+toorig = gettranslation(190,200)
+#Lineas intermedias
+for rot in range(-10,190,7):
+    rotation = getrotation(rot)
+    transform = np.dot(rotation, toorig)
+    temp = list()
+    for i in range(len(short)):
+        temp.append(np.dot(short[i],transform).tolist())
+    dehomogenize(temp)
+    canvas.create_line(temp)
 
 
 
