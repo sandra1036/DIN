@@ -2,10 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d787dd7a-e22d-48fa-86a8-02eae42e7161" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../EjercicioWidgets/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../EjercicioWidgets/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Speedodom.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Velocimetro2.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/brujula.py" beforeDir="false" afterPath="$PROJECT_DIR$/brujula.py" afterDir="false" />
     </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -22,62 +23,28 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
   </component>
   <component name="ProjectId" id="1X4OPOsCrxeLifL6CgBvFxfEYIh" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
-  <component name="ProjectViewState">
-    <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showExcludedFiles" value="true" />
-    <option name="showLibraryContents" value="true" />
-  </component>
   <component name="PropertiesComponent">
-    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Velocimetro.py" />
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
-  <component name="RunManager" selected="Python.brujula">
-    <configuration name="2DTransforms" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="Velocimetro" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/.." />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../2DTransforms.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="Velocimetro" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="Velocimetro" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/.." />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../Velocimetro.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="brujula" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Python.Velocimetro2">
+    <configuration name="Velocimetro2" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Velocimetro" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -89,7 +56,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/brujula.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Velocimetro2.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -121,10 +88,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.brujula" />
+        <item itemvalue="Python.Velocimetro2" />
         <item itemvalue="Python.velocimetro" />
-        <item itemvalue="Python.Velocimetro" />
-        <item itemvalue="Python.2DTransforms" />
       </list>
     </recent_temporary>
   </component>
@@ -141,42 +106,17 @@
     </task>
     <servers />
   </component>
-  <component name="WindowStateProjectService">
-    <state x="780" y="297" key="FileChooserDialogImpl" timestamp="1580730137593">
-      <screen x="65" y="24" width="1855" height="1056" />
-    </state>
-    <state x="780" y="297" key="FileChooserDialogImpl/65.24.1855.1056@65.24.1855.1056" timestamp="1580730137593" />
-    <state width="1832" height="296" key="GridCell.Tab.0.bottom" timestamp="1580906878417">
-      <screen x="65" y="24" width="1855" height="1056" />
-    </state>
-    <state width="1832" height="296" key="GridCell.Tab.0.bottom/65.24.1855.1056@65.24.1855.1056" timestamp="1580906878417" />
-    <state width="1832" height="296" key="GridCell.Tab.0.center" timestamp="1580906878416">
-      <screen x="65" y="24" width="1855" height="1056" />
-    </state>
-    <state width="1832" height="296" key="GridCell.Tab.0.center/65.24.1855.1056@65.24.1855.1056" timestamp="1580906878416" />
-    <state width="1832" height="296" key="GridCell.Tab.0.left" timestamp="1580906878415">
-      <screen x="65" y="24" width="1855" height="1056" />
-    </state>
-    <state width="1832" height="296" key="GridCell.Tab.0.left/65.24.1855.1056@65.24.1855.1056" timestamp="1580906878415" />
-    <state width="1832" height="296" key="GridCell.Tab.0.right" timestamp="1580906878417">
-      <screen x="65" y="24" width="1855" height="1056" />
-    </state>
-    <state width="1832" height="296" key="GridCell.Tab.0.right/65.24.1855.1056@65.24.1855.1056" timestamp="1580906878417" />
-    <state x="486" y="174" key="SettingsEditor" timestamp="1580728629458">
-      <screen x="65" y="24" width="1855" height="1056" />
-    </state>
-    <state x="486" y="174" key="SettingsEditor/65.24.1855.1056@65.24.1855.1056" timestamp="1580728629458" />
-    <state x="894" y="312" key="com.intellij.ide.util.TipDialog" timestamp="1580901256893">
-      <screen x="65" y="24" width="1855" height="1056" />
-    </state>
-    <state x="894" y="312" key="com.intellij.ide.util.TipDialog/65.24.1855.1056@65.24.1855.1056" timestamp="1580901256893" />
-    <state x="628" y="387" width="1855" height="1056" key="dock-window-1" timestamp="1580801348074">
-      <screen x="65" y="24" width="1855" height="1056" />
-    </state>
-    <state x="628" y="387" width="1855" height="1056" key="dock-window-1/65.24.1855.1056@65.24.1855.1056" timestamp="1580801348074" />
-    <state x="655" y="236" width="672" height="678" key="search.everywhere.popup" timestamp="1580800418078">
-      <screen x="65" y="24" width="1855" height="1056" />
-    </state>
-    <state x="655" y="236" width="672" height="678" key="search.everywhere.popup/65.24.1855.1056@65.24.1855.1056" timestamp="1580800418078" />
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>
