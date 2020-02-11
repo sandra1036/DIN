@@ -26,6 +26,9 @@ def getrotation(deg:float)->list:
     rad = np.radians(deg)
     return [[np.cos(rad), np.sin(rad), 0], [-np.sin(rad), np.cos(rad), 0], [0, 0, 1]]
 
+#Lo usa en una clase a parte donde lo llama desde ahi
+def getscaled(self, xscl:float, yscl:float) -> list:
+    return [[xscl, 0, 0], [0, yscl, 0], [0, 0, 1]]
 
 
 
