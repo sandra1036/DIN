@@ -2,6 +2,7 @@ from tkinter import *
 from tkinter import ttk
 import numpy as np
 
+#Todo lo que que estaba escrito en el canvas pones un self
 class Brujula(Canvas):
 
     def xy(self,event):
