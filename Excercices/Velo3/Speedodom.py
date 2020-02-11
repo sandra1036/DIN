@@ -29,6 +29,7 @@ class Speedodom(Canvas):
         needle = [[0,0], [-7, -7], [0, -150], [7, -7]]
         self.homogenize(needle)
         toorig = self.gettranslation(200, 200)
+        #Hay 240 de limite del cuenta kilometros y 240 grados
         rotation = self.getrotation((240*vel/240)-120)
         transform = np.dot(rotation, toorig)
         needle2 = np.dot(needle,transform)
