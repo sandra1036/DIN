@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d787dd7a-e22d-48fa-86a8-02eae42e7161" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Brujula.py" beforeDir="false" afterPath="$PROJECT_DIR$/Brujula.py" afterDir="false" />
     </list>
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -21,25 +21,19 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
   </component>
   <component name="ProjectId" id="1X4OPOsCrxeLifL6CgBvFxfEYIh" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent">
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
     </key>
-  </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
   </component>
   <component name="RunManager" selected="Python.brujula">
     <configuration name="Velocimetro2" type="PythonConfigurationType" factoryName="Python" temporary="true">
@@ -138,5 +132,27 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="WindowStateProjectService">
+    <state width="1832" height="296" key="GridCell.Tab.0.bottom" timestamp="1581511778858">
+      <screen x="65" y="24" width="1855" height="1056" />
+    </state>
+    <state width="1832" height="296" key="GridCell.Tab.0.bottom/65.24.1855.1056@65.24.1855.1056" timestamp="1581511778858" />
+    <state width="1832" height="296" key="GridCell.Tab.0.center" timestamp="1581511778858">
+      <screen x="65" y="24" width="1855" height="1056" />
+    </state>
+    <state width="1832" height="296" key="GridCell.Tab.0.center/65.24.1855.1056@65.24.1855.1056" timestamp="1581511778858" />
+    <state width="1832" height="296" key="GridCell.Tab.0.left" timestamp="1581511778857">
+      <screen x="65" y="24" width="1855" height="1056" />
+    </state>
+    <state width="1832" height="296" key="GridCell.Tab.0.left/65.24.1855.1056@65.24.1855.1056" timestamp="1581511778857" />
+    <state width="1832" height="296" key="GridCell.Tab.0.right" timestamp="1581511778858">
+      <screen x="65" y="24" width="1855" height="1056" />
+    </state>
+    <state width="1832" height="296" key="GridCell.Tab.0.right/65.24.1855.1056@65.24.1855.1056" timestamp="1581511778858" />
+    <state x="908" y="188" key="SettingsEditor" timestamp="1581510543124">
+      <screen x="65" y="24" width="1855" height="1056" />
+    </state>
+    <state x="908" y="188" key="SettingsEditor/65.24.1855.1056@65.24.1855.1056" timestamp="1581510543124" />
   </component>
 </project>

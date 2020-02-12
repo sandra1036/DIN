@@ -26,6 +26,28 @@ class Brujula(Canvas):
         rad = np.radians(deg)
         return [[np.cos(rad), np.sin(rad), 0], [-np.sin(rad), np.cos(rad), 0], [0, 0, 1]]
 
+    def getscaled(self, xscl:float, yscl:float) -> list:
+        return [[xscl, 0, 0], [0, yscl, 0], [0, 0, 1]]
+
+
+
+    def move(self, m:float):
+        print(m)
+        if m < 0 or m > 360: return
+        self.delete(self.au)
+        needle = [[0, 0], [-7, -7], [0, -150], [7, -7]]
+        self.homogenize(needle)
+        toorig = self.gettranslation(200, 200)
+        rotation = self.getrotation((360 * m / 360) - 120)
+        transform = np.dot(rotation, toorig)
+        needle2 = np.dot(needle, transform)
+        needle2 = np.dot(needle2, self.scale).tolist()
+        self.dehomogenize(needle2)
+        self.au = self.create_polygon(needle2, outline='#f11', fill='#1f1', width=2)
+
+
+
+
     def __init__(self,master=NONE,**options):
         super().__init__(master, options)
         self.w0=400
@@ -68,8 +90,15 @@ class Brujula(Canvas):
             z = z + 1
 
 
-        self.create_polygon(250,90,280,230,250,250,220,230,250,90,fill="white",outline="red",width=2)
-
+        self.au=self.create_polygon(250,90,280,230,250,250,220,230,250,90,fill="white",outline="red",width=2)
 
 
         self.bind("<Button-1>", lambda e:print(e.x,e.y))
+
+
+
+
+        coor = IntVar()
+        entry = ttk.Entry(master, textvariable=coor)
+        entry.bind('<Return>', lambda e: self.move(float(coor.get())))
+        self.create_window(temp , window=entry)
