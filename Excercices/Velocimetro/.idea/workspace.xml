@@ -4,7 +4,9 @@
     <list default="true" id="d787dd7a-e22d-48fa-86a8-02eae42e7161" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Brujula.py" beforeDir="false" afterPath="$PROJECT_DIR$/Brujula.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/velocimetro.py" beforeDir="false" afterPath="$PROJECT_DIR$/velocimetro.py" afterDir="false" />
     </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -27,13 +29,25 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Velo4" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
     </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
   </component>
   <component name="RunManager" selected="Python.brujula">
     <configuration name="Velocimetro2" type="PythonConfigurationType" factoryName="Python" temporary="true">
@@ -102,8 +116,8 @@
     <recent_temporary>
       <list>
         <item itemvalue="Python.brujula" />
-        <item itemvalue="Python.Velocimetro2" />
         <item itemvalue="Python.velocimetro" />
+        <item itemvalue="Python.Velocimetro2" />
       </list>
     </recent_temporary>
   </component>

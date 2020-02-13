@@ -30,20 +30,18 @@ class Brujula(Canvas):
         return [[xscl, 0, 0], [0, yscl, 0], [0, 0, 1]]
 
 
-
-    def move(self, m:float):
-        print(m)
-        if m < 0 or m > 360: return
+    def move(self, c:int):
+        print(c)
         self.delete(self.au)
-        needle = [[0, 0], [-7, -7], [0, -150], [7, -7]]
+        needle =[[0,0], [-30, -30], [0, -160], [30, -30]]
         self.homogenize(needle)
-        toorig = self.gettranslation(200, 200)
-        rotation = self.getrotation((360 * m / 360) - 120)
-        transform = np.dot(rotation, toorig)
-        needle2 = np.dot(needle, transform)
-        needle2 = np.dot(needle2, self.scale).tolist()
-        self.dehomogenize(needle2)
-        self.au = self.create_polygon(needle2, outline='#f11', fill='#1f1', width=2)
+        toorig = self.gettranslation(250, 250)
+        if (c==0):
+            rotation = self.getrotation(0)
+            transform = np.dot(rotation, toorig)
+            needle2 = np.dot(needle, transform).tolist()
+            self.dehomogenize(needle2)
+            self.create_polygon(needle2,fill="white",outline="red",width=2)
 
 
 
@@ -95,10 +93,8 @@ class Brujula(Canvas):
 
         self.bind("<Button-1>", lambda e:print(e.x,e.y))
 
-
-
-
+        temp = [[250, 270]]
         coor = IntVar()
         entry = ttk.Entry(master, textvariable=coor)
-        entry.bind('<Return>', lambda e: self.move(float(coor.get())))
+        entry.bind('<Return>', lambda e: self.move(int(coor.get())))
         self.create_window(temp , window=entry)

@@ -1,4 +1,5 @@
 from tkinter import *
+from tkinter import ttk
 import numpy as np
 
 
@@ -36,6 +37,9 @@ window=Tk()
 canvas=Canvas(window)
 canvas.pack()
 
+# Crea un Texto
+# canvas.create_text(100,10,fill="darkblue",font="Times 20 italic bold",
+#                         text="Label")
 
 canvas.create_oval(173-2,214-2,194+2,232+2,fill="black")
 canvas.create_oval(173,214,194,232,fill="red")
@@ -90,6 +94,7 @@ for rot in range(-10,190,7):
 
 
 canvas.bind("<Button-1>", lambda e:print(e.x,e.y))
+
 window.update()
 window.minsize(500,350)
 window.mainloop()
